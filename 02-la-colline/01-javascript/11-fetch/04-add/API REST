@@ -1,0 +1,44 @@
+API REST
+
+*  endpoint (http://url.com/endpoint)
+*  methode accès (GET, POST, DELETE)
+
+Conventions
+
+*  GET (listing)
+*  POST (création)
+*  DELETE (suppression)
+
+Exercice
+
+- Listing
+
+*  /heroes => GET de ta DB (api.json)
+*  /heroes/1 => GET de ta DB pour l'id 1
+
+- Creation
+
+*  Indiquer le header (ce que tu pousses est du JSON)
+*  Le faire en POST
+*  Remplir toutes les informations
+*  curl 
+	-H "Content-Type: application/json" 	(header)
+	-X POST 								(method)
+	"http://localhost:3000/heroes" 
+	--data '{
+		"id": 7, 
+		"name": "toto", 
+		"alterEgo": "oups", 
+		"abilities": [ 
+			"a", 
+			"b" 
+		] 
+	}'
+
+- Suppresion
+
+*  Indiquer le endpoint du heroes a supprimer
+*  Methode est du DELETE
+*  curl 
+	-X DELETE 
+	"http://localhost:3000/heroes/6"
